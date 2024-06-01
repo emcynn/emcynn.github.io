@@ -437,3 +437,189 @@ footer {
 .social-icon:hover {
     transform: scale(1.2);
 }
+
+/* ABOUT PAGE */
+.about-game {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    overflow: hidden;
+    background-image: url('bg1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.about-game h1 {
+    font-size: 5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Poetsen One', sans-serif;
+}
+
+.about-game h1 b {
+    color: #E5A650;
+}
+
+.about-game h3 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-top: 5%;
+    margin-bottom: -6.5%;
+}
+
+.about-game h3 b {
+    color: #E5A650;
+}
+
+.about-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.gif-container {
+    flex: 1;
+    margin-left: 10%;
+}
+
+.text-box {
+    flex: 1;
+    background-color: #E5A650;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    padding: 20px;
+    margin-right: 7%;
+    margin-top: 1%;
+    height: 237px;
+}
+
+.text-box p {
+    font-size: 100%;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.feature-boxes {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.feature-box {
+    background-color: #E5A650;
+    flex: 1;
+    margin: 0 10px;
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.feature-box::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.feature-image {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.feature-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #5A0000;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-weight: 900;
+}
+
+.feature-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.feature-box:hover .feature-description {
+    opacity: 1;
+}
+
+.developers {
+    margin: 50px 0;
+    padding: 50px 20px;
+    text-align: center;
+    background-image: url('bg4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.41);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    width: 100%;
+    margin-left: -1.8%;
+}
+
+.developers h2 {
+    font-size: 150%;
+    color: #E5A650;
+    margin-bottom: 20px;
+}
+
+.hazelight-logo {
+    width: 40%;
+    height: auto;
+    margin-top: -2%;
+}
+
+.developers p {
+    font-size: 1.2em;
+    color: #ffffff;
+    max-width: 80%;
+    margin: 0 auto 20px;
+    text-align: justify;
+}
+
+.more-about-developer {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #5A0000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.more-about-developer:hover {
+    background-color: #E5A650;
+}
