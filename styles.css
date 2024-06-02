@@ -10,7 +10,6 @@ body, html {
 }
 
 /* HOMEPAGE */
-
 /* Navigation Bar */
 .navbar {
     position: fixed;
@@ -466,7 +465,7 @@ footer {
     font-size: 1.5em;
     color: #ffffff;
     margin-top: 5%;
-    margin-bottom: -6.5%;
+    margin-bottom: -11%;
 }
 
 .about-game h3 b {
@@ -622,4 +621,224 @@ footer {
 
 .more-about-developer:hover {
     background-color: #E5A650;
+}
+
+/* CHARACTERS SECTION */
+.characters-section {
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    height: 100vh;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    box-sizing: border-box;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 50px 20px;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 3.9em;
+    margin-top: 10%;
+    margin-bottom: 20px;
+    font-family: 'Poetsen One', sans-serif;
+}
+
+.characters-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.character-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character-circle {
+    width: 200px;
+    height: 200px;
+    background-color: #E5A650;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.character-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.character-circle::before {
+    content: attr(data-description);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 75%;
+}
+
+.character-circle:hover::before {
+    opacity: 1;
+}
+
+.character-circle:hover img {
+    opacity: 0.3;
+}
+
+.character-name {
+    margin-top: 10px;
+    font-size: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.quote {
+    font-style: italic;
+    margin-top: -1%;
+    padding: 0 20px;
+    font-size: 1.05em;
+}
+
+/* GAMEPLAY PAGE */
+/* Adjustments for the slides */
+.mySlides {
+    position: relative;
+    width: 98.7vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Hide overflow to prevent white background */
+}
+
+/* Styling for the chapter heading */
+.chapter-heading {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-style: italic;
+    color: #ffffff;
+    font-size: 2vw; 
+    text-align: center;
+    z-index: 2; /* Ensure heading is above the slide image */
+}
+
+/* Adjustments for the gameplay heading */
+.gameplay-heading {
+    color: #E5A650; 
+    font-weight: bold;
+    font-size: 6vw;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    z-index: 2; /* Ensure heading is above the slide image */
+}
+
+/* Styling for the gameplay text */
+.gameplay-text {
+    position: absolute;
+    padding: 0 5px 0 5px;
+    line-height: 1.5;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #ffffff;
+    font-size: 110%; 
+    max-width: 80%; /* Limit width to prevent text overflow */
+    z-index: 2; /* Ensure text is above the slide image */
+}
+
+.slideshow-container {
+    max-width: 2600px;
+    width: max-content;
+    position: relative;
+}
+      
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 3; /* Ensure arrows are above the slide image */
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+      
+/* Buttons will have translucent background when hovered*/
+.prev:hover, .next:hover {
+    background-color: rgba(226, 172, 47, 0.723);
+}
+      
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+      
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+      
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px;
+    }
 }
