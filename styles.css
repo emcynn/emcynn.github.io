@@ -166,7 +166,7 @@ body, html {
     margin-top: -5px;
 }
 
-.learn-more {
+.learn-more-button {
     display: inline-block;
     margin-top: -10px;
     padding: 10px 20px;
@@ -180,7 +180,7 @@ body, html {
     text-decoration: none;
 }
 
-.learn-more:hover {
+.learn-more-button:hover {
     background-color: #d19540;
 }
 
@@ -734,8 +734,9 @@ h1 {
 .quote {
     font-style: italic;
     margin-top: -1%;
-    padding: 0 20px;
+    padding: 0 20px 0 20px;
     font-size: 1.05em;
+    margin-bottom: 10%;
 }
 
 /* GAMEPLAY PAGE */
@@ -841,4 +842,80 @@ h1 {
     .prev, .next, .text {
         font-size: 11px;
     }
+}
+
+/* CONTACT PAGE */
+.contact-body {
+    background-image: url('bg5.png');
+    background-size: cover;
+}
+
+.contact-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    align-items: right;
+    padding: 40px;
+    margin: 100px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+    text-align: center;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #5A0000;
+    transition: all 0.3s ease;
+}
+
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+    /* top: -10px; */
+    left: 10px;
+    font-size: 12px;
+    color: #5a000025;
+}
+
+.submit-button {
+    background-color: #FF8337;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #FF6C00;
+}
+
+#success-message {
+    text-align: center;
+    margin-top: 20px;
 }
